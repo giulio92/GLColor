@@ -43,5 +43,14 @@ public final class GLColor: UIColor {
 
 @available(iOS 10.0, *)
 public extension UIColor {
-	
+	final func matching(colorGamut: UIDisplayGamut) -> UIColor {
+		switch colorGamut {
+		case .P3:
+			let color: CIColor = CIColor(color: self)
+			return UIColor(displayP3Red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+			
+		default:
+			return self
+		}
+	}
 }
