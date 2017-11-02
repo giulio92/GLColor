@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/github/license/giulio92/GLColor.svg)](https://github.com/giulio92/GLColor/blob/master/LICENSE.txt)
 
 ## What it is
-GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate device gamut-aware (`sRGB` or `DCI-P3`) or convert existing `UIColor`s automatically.
+GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s or convert existing ones automatically.
 
 As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications. Unfortunately the regular `UIColor` uses `sRGB` as the default color space, causing `DCI-P3` compatible to render in sRBG mode all the time, instead of being able to show all the possible colors. To enable `DCI-P3` rendering you must initialize a `UIColor` using a new alternative `init` signature provided by Apple:
 
@@ -22,16 +22,15 @@ With GLColor you have two simple choices:
    ```
    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat, gamut: UIDisplayGamut)
    ```
-2. Use the provided `extension` with your already existing `UIColors`:
+2. Use the provided `extension` with your already existing `UIColor`s:
    ```
    let color: UIColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
    color.matching(colorGamut: traitCollection.displayGamut)
    ```
 
-Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.displayGamut` value used to determine the correct color space to use. The `sRBG` to `DCI-P3` color space convertion will occur only on compatible devices.
+Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.displayGamut` value used to determine the correct color space to use. The `sRBG` to `DCI-P3` color space convertion will occur **only** on compatible devices.
 
-Currently those devices support the `DCI-P3` color space:
-
+Devices supporting `DCI-P3` color space:
 #### iOS:
 - iPhone X
 - iPhone 8/8 Plus
