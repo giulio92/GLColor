@@ -32,3 +32,7 @@ import UIKit
 class GLColor: UIColor {
 
 }
+
+public extension UIColor {
+	
+}
