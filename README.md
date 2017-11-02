@@ -8,7 +8,27 @@
 ## What it is
 GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate or convert device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s automatically.
 
-As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications.
+As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications. Unfortunately the regular `UIColor` uses `sRGB` as the default color space, causing `DCI-P3` compatible to stay in sRBG mode all the time, instead of being able to show all the possible colors. To enable `DCI-P3` rendering you must initialize a `UIColor` using a new alternative `init` signature provided by Apple:
+
+```
+UIColor(displayP3Red:, green:, blue:, alpha:)
+```
+
+But this can lead to repetitive error-prone code and/or `if statement`s since you always have to specify which color gamut to use for every single `UIColor` in your code.
+
+### How to use
+
+With GLColor you have two simple choices:
+1. Use it like a `UIColor` replacement and initialize all the colors like gamut-aware with the provided signature:
+   ```
+   init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat, gamut: UIDisplayGamut)
+   ```
+   Where the `gamut` parameter is your `UITraitCollection` `.displayGamut` value used to determine the correct color space to    use.
+2. Use the provided `extension` to convert your existing `sRGB` `UIColors` (only on `DCI-P3` compatible devices):
+   ```
+   let color: UIColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+   color.matching(colorGamut: traitCollection.displayGamut)
+   ```
 
 Currently those devices support the `DCI-P3` color space:
 
