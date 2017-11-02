@@ -10,7 +10,9 @@ GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be
 
 As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications.
 
-#### iOS Devices supporting `DCI-P3` color space:
+Currently those devices support the `DCI-P3` color space:
+
+#### iOS:
 - iPhone X
 - iPhone 8/8 Plus
 - iPhone 7/7 Plus
@@ -18,5 +20,5 @@ As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/hu
 - iPad Pro 10.5-inch
 - iPad Pro (9.7-inch)
 
-#### Macs supporting `DCI-P3` color space:
+#### macOS:
 - iMac Late 2015+
