@@ -29,6 +29,14 @@
 
 import PackageDescription
 
+#if os(iOS) || os(macOS)
+
 let package = Package(
 	name: "GLColor"
 )
+
+#else
+	
+fatalError("Unsupported OS")
+	
+#endif
