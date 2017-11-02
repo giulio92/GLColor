@@ -20,6 +20,6 @@
 
 ### Your Environment:
 <!--- Include as many relevant details about the environment you experienced the bug in -->
-* GLTableCollectionView version:
+* GLColor version:
 * Device:
-* iOS version:
+* macOS/iOS version:
