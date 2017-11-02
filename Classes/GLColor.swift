@@ -29,10 +29,12 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public final class GLColor: UIColor {
 
 }
 
+@available(iOS 10.0, *)
 public extension UIColor {
 	
 }
