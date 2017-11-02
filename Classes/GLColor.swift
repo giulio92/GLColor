@@ -29,7 +29,7 @@
 
 import UIKit
 
-class GLColor: UIColor {
+public final class GLColor: UIColor {
 
 }
 
