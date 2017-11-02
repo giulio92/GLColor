@@ -16,19 +16,19 @@ UIColor(displayP3Red:, green:, blue:, alpha:)
 
 But this can lead to repetitive error-prone code and/or `if statement`s since you always have to specify which color gamut to use for every single `UIColor` in your code.
 
-### How to use
-
+## How to use
 With GLColor you have two simple choices:
-1. Use it like a `UIColor` replacement and initialize all the colors like gamut-aware with the provided signature:
+1. Use it like a `UIColor` replacement to initialize a gamut-aware color with the provided signature:
    ```
    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat, gamut: UIDisplayGamut)
    ```
-   Where the `gamut` parameter is your `UITraitCollection` `.displayGamut` value used to determine the correct color space to    use.
-2. Use the provided `extension` to convert your existing `sRGB` `UIColors` (only on `DCI-P3` compatible devices):
+2. Use the provided `extension` with your already existing `UIColors`:
    ```
    let color: UIColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
    color.matching(colorGamut: traitCollection.displayGamut)
    ```
+
+Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.displayGamut` value used to determine the correct color space to use. The `sRBG` to `DCI-P3` color space convertion will occur only on compatible devices.
 
 Currently those devices support the `DCI-P3` color space:
 
