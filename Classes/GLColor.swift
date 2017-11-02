@@ -31,7 +31,14 @@ import UIKit
 
 @available(iOS 10.0, *)
 public final class GLColor: UIColor {
-
+	convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat, gamut: UIDisplayGamut) {
+		switch gamut {
+		case .P3:
+			self.init(displayP3Red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
+		default:
+			self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
+		}
+	}
 }
 
 @available(iOS 10.0, *)
