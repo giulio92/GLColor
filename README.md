@@ -6,4 +6,17 @@
 [![license](https://img.shields.io/github/license/giulio92/GLColor.svg)](https://github.com/giulio92/GLColor/blob/master/LICENSE.txt)
 
 ## What it is
-GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate or convert device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s automatically. 
+GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate or convert device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s automatically.
+
+As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications.
+
+#### iOS Devices supporting `DCI-P3` color space:
+- iPhone X
+- iPhone 8/8 Plus
+- iPhone 7/7 Plus
+- iPad Pro 12.9-inch (2nd generation)
+- iPad Pro 10.5-inch
+- iPad Pro (9.7-inch)
+
+#### Macs supporting `DCI-P3` color space:
+- iMac Late 2015+
