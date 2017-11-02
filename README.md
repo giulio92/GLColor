@@ -6,4 +6,4 @@
 [![license](https://img.shields.io/github/license/giulio92/GLColor.svg)](https://github.com/giulio92/GLColor/blob/master/LICENSE.txt)
 
 ## What it is
-GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate `sRGB` and `P3` `UIColor`s automatically based on the device's supported `UIDisplayGamut`
+GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate or convert device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s automatically. 
