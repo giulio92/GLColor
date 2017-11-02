@@ -6,15 +6,15 @@
 [![license](https://img.shields.io/github/license/giulio92/GLColor.svg)](https://github.com/giulio92/GLColor/blob/master/LICENSE.txt)
 
 ## What it is
-GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate or convert device gamut-aware (`sRGB` or `DCI-P3`) `UIColor`s automatically.
+GLColor is a drop-in, ready to use, `UIColor` subclass and extension that can be used to generate device gamut-aware (`sRGB` or `DCI-P3`) or convert existing `UIColor`s automatically.
 
-As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications. Unfortunately the regular `UIColor` uses `sRGB` as the default color space, causing `DCI-P3` compatible to stay in sRBG mode all the time, instead of being able to show all the possible colors. To enable `DCI-P3` rendering you must initialize a `UIColor` using a new alternative `init` signature provided by Apple:
+As Apple Human Interface Guidelines [reports](https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/) its important to use wide color on compatible displays whenever possible to ensure the best color experience in your applications. Unfortunately the regular `UIColor` uses `sRGB` as the default color space, causing `DCI-P3` compatible to render in sRBG mode all the time, instead of being able to show all the possible colors. To enable `DCI-P3` rendering you must initialize a `UIColor` using a new alternative `init` signature provided by Apple:
 
 ```
 UIColor(displayP3Red:, green:, blue:, alpha:)
 ```
 
-But this can lead to repetitive error-prone code and/or `if statement`s since you always have to specify which color gamut to use for every single `UIColor` in your code.
+But this can lead to repetitive error-prone code and/or `if statement`s since you always have to specify which color gamut to use for every single `UIColor` in your code, based on device capabilities.
 
 ## How to use
 With GLColor you have two simple choices:
