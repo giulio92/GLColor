@@ -43,5 +43,5 @@ Devices supporting `DCI-P3` color space:
 - iMac Late 2015+
 
 ## 📚 Further readings
-- sRBG color space - https://en.wikipedia.org/wiki/SRGB
+- sRBG - https://en.wikipedia.org/wiki/SRGB
 - DCI-P3 - https://en.wikipedia.org/wiki/DCI-P3
