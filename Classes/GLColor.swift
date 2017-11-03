@@ -55,3 +55,16 @@ public extension UIColor {
 		}
 	}
 }
+
+@available(iOS 10.0, *)
+public extension GLColor {
+	final var p3Gamut: UIColor {
+		let color: CIColor = CIColor(color: self)
+		return UIColor(displayP3Red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+	}
+	
+	final var sRGBGamut: UIColor {
+		let color: CIColor = CIColor(color: self)
+		return UIColor(red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+	}
+}
