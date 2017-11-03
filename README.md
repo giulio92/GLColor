@@ -40,8 +40,8 @@ pod 'GLColor'
 ```
 then run `pod install`
 
-## Devices supporting `DCI-P3` color space:
-**📱 iOS:**
+### Devices supporting `DCI-P3` color space:
+📱 iOS:
 - iPhone X
 - iPhone 8/8 Plus
 - iPhone 7/7 Plus
@@ -49,9 +49,9 @@ then run `pod install`
 - iPad Pro 10.5-inch
 - iPad Pro (9.7-inch)
 
-**🖥 macOS:**
+🖥 macOS:
 - iMac Late 2015+
 
-## 📚 Further readings
+### 📚 Further readings
 - sRBG - https://en.wikipedia.org/wiki/SRGB
 - DCI-P3 - https://en.wikipedia.org/wiki/DCI-P3
