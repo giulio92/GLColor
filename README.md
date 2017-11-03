@@ -31,7 +31,7 @@ With GLColor you have two simple choices:
 
 Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.displayGamut` value used to determine the correct color space to use. The `sRBG` to `DCI-P3` color space convertion will occur **only** on compatible devices.
 
-## Installation
+## 🔰 Installation
 **CocoaPods**
 
 Add the following entry in your Podfile:
