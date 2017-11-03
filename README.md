@@ -33,12 +33,15 @@ Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.dis
 
 ## 🔰 Installation
 **CocoaPods**
-
-Add the following entry in your Podfile:
-```
-pod 'GLColor'
-```
-then run `pod install`
+1. Add the following entry in your Podfile:
+   ```
+   pod 'GLColor'
+   ```
+2. Run `pod install`
+  
+**Manual installation**
+1. Download the [latest](https://github.com/giulio92/GLColor/releases/latest) version
+2. Copy the GLColor.swift file in your Xcode project structure
 
 ### Devices supporting `DCI-P3` color space:
 📱 iOS:
