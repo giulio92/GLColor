@@ -31,8 +31,17 @@ With GLColor you have two simple choices:
 
 Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.displayGamut` value used to determine the correct color space to use. The `sRBG` to `DCI-P3` color space convertion will occur **only** on compatible devices.
 
-Devices supporting `DCI-P3` color space:
-#### 📱 iOS:
+## Installation
+**CocoaPods**
+
+Add the following entry in your Podfile:
+```
+pod 'GLColor'
+```
+then run `pod install`
+
+## Devices supporting `DCI-P3` color space:
+**📱 iOS:**
 - iPhone X
 - iPhone 8/8 Plus
 - iPhone 7/7 Plus
@@ -40,7 +49,7 @@ Devices supporting `DCI-P3` color space:
 - iPad Pro 10.5-inch
 - iPad Pro (9.7-inch)
 
-#### 🖥 macOS:
+**🖥 macOS:**
 - iMac Late 2015+
 
 ## 📚 Further readings
