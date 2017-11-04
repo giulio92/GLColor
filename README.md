@@ -53,7 +53,13 @@ Where the `gamut` and `colorGamut` parameters are your `UITraitCollection` `.dis
 - iPad Pro (9.7-inch)
 
 🖥 macOS:
-- iMac Late 2015+
+- iMac Retina 5K Late 2015+
+- iMac Retina 4K Late 2015+
+- iMac Pro Late 2017+
+- MacBook Pro 2016+
+
+📺 tvOS:
+- Apple TV 4th gen+
 
 ### 📚 Further readings
 - sRBG - https://en.wikipedia.org/wiki/SRGB
