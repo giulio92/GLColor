@@ -6,7 +6,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2017 Giulio Lombardo
+//  Copyright (c) 2018 Giulio Lombardo
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to
@@ -35,7 +35,7 @@ public final class GLColor: UIColor {
 		switch gamut {
 		case .P3:
 			self.init(displayP3Red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
-			
+
 		default:
 			self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
 		}
@@ -49,7 +49,7 @@ public extension UIColor {
 		case .P3:
 			let color: CIColor = CIColor(color: self)
 			return UIColor(displayP3Red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
-			
+
 		default:
 			return self
 		}
@@ -62,7 +62,7 @@ public extension GLColor {
 		let color: CIColor = CIColor(color: self)
 		return UIColor(displayP3Red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
 	}
-	
+
 	final var sRGBGamut: UIColor {
 		let color: CIColor = CIColor(color: self)
 		return UIColor(red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
